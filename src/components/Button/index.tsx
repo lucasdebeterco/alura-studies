@@ -1,7 +1,13 @@
 import style from './button.module.scss';
 
-export function Button() {
+interface ButtonProps {
+    children: String
+}
+
+export function Button({children}: ButtonProps) {
     return(
-        <button className={style.botao}>Teste</button>
+        <button className={style.botao}>
+            {children}
+        </button>
     )
 }
