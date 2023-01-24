@@ -1,24 +1,11 @@
 import style from './list.module.scss'
 import {Item} from "./Item";
-import {useState} from "react";
+import {TarefaProps} from "../../types/tarefa";
 
-export function List() {
-    const [tarefas, setTarefas] = useState([{
-        tarefa: 'React',
-        tempo: '02:00:00'
-    },  {
-        tarefa: 'Javascript',
-        tempo: '01:00:00'
-    },  {
-        tarefa: 'Typescript',
-        tempo: '03:00:00'
-    }])
-
+export function List({tarefas}: {tarefas: TarefaProps[]}) {
     return (
         <aside className={style.listaTarefas}>
-            <h2 onClick={() => {
-                setTarefas([...tarefas, { tarefa: "Estudar estado", tempo: "05:00:00"}])
-            }}>
+            <h2>
                 Estudos do dia
             </h2>
             <ul>

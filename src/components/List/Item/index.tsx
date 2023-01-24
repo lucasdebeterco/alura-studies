@@ -1,8 +1,8 @@
 import style from "../list.module.scss";
 
 interface ItemProps {
-    tarefa: string
-    tempo: string,
+    tarefa: String
+    tempo: String,
 }
 
 export function Item({tarefa, tempo}: ItemProps) {
